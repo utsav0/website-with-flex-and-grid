@@ -1,0 +1,585 @@
+:root {
+  --brandColor: #fb0053;
+  --darkContrast: #6d0104;
+  --lightContrast: #f7fff7;
+}
+
+/* .subscribeSection{
+  background-color: lightblue;
+} */
+
+
+body {
+  
+  max-width: 2500px; /* To prevent the website from stretching too much on wider screens */
+  margin: 0 auto;  /* To center it horizontally on ultra wide screens */
+
+
+  display: grid;
+  grid-template-rows: repeat(3, minmax(max-content, 100vh)) auto auto minmax(max-content, 40vh);
+  gap: 25px;
+  background-color: var(--lightContrast);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: #fb0053;
+}
+
+input{
+  color: #fb0053;
+  caret-color: #fb0053;
+}
+
+section,
+header,
+footer {
+  padding: 10px;
+
+}
+
+body > section {
+  /* min-height: 100vh; */
+}
+
+.heroSection {
+  display: grid;
+  grid-template: auto 1fr / 2fr 1fr 2fr;
+}
+
+header {
+  align-self: start;
+  /* position: relative; */
+   /* So that the absolutely positioned nav changes relative to it, not the body */
+  grid-area: 1 / 1 / span 1 / span 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 60px;
+  mix-blend-mode: multiply;
+}
+
+.navigation {
+  position: absolute;
+
+
+  /* To center it horizontally */
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* To create the gap between links */
+  display: flex;
+  gap: 40px;
+}
+
+.searchBar{
+  flex-grow: 0;
+}
+
+/* For the links of navigation */
+.navigation a {
+  text-decoration: none;
+  color: #010101;
+  font-family: "EB Garamond", serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.searchBar {
+  display: flex;
+  border-radius: 100px; /* To make it pill shaped */
+}
+
+.searchBar:hover {
+  border: 2px solid #010101;
+}
+
+.searchBar:hover .searchInputBox {
+  width: min(150px, 17vw);
+  /* width: auto; */
+}
+
+.searchInputBox {
+  transition: width 1s;
+  width: 0; /* Initially, 0 width */
+  padding: 5px;
+  border-radius: 100px;
+}
+
+.searchButton {
+  padding: 5px 7px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.searchInputBox,
+.searchButton {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.hamburgerMenu{
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+
+.heroText {
+  grid-area: 2 / 1 / span 1 / span 2;
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Maven Pro", sans-serif;
+  color: var(--darkContrast);
+
+  /* To create a gap between all the hero text elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* To center all the hero text vertically */
+}
+
+.heroHeading {
+  font-size: min(8vw, 4rem);
+}
+
+
+.heroSubheading {
+  font-size: min(1.2rem, 3.4vw);
+  color: #010101b3;
+  border-bottom: 1px solid var(--brandColor);
+  width: fit-content;
+}
+
+.heroHeading > .wordMountain {
+  color: var(--brandColor);
+}
+
+.heroDescription{
+  font-size: min(1rem, 2.2vw);
+  margin-top: min(30px, 3vw);
+}
+
+.CTAContainer{
+  margin-top: min(15px, 1.5vw)
+}
+
+/* For all the CTA buttons on the website */
+.CTA {
+  /* width: 150px; */
+  /* width: clamp(150px, 100px, (100vw - 600px)*200); */
+  /* width: auto; */
+  /* aspect-ratio: 4; */
+  padding: min(12px, 1.5vw) min(17px, 1.7vw);
+  padding: 1.5vw 1.7vw;
+  border-radius: 100px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #010101;
+  font-size: 1.1rem;
+  line-height: 100%;
+  border: 3px solid #fb0053;
+}
+
+.heroText .secondaryCTA{
+  margin-left: 10px;
+}
+
+.primaryCTA {
+  background-color: #fb0053;
+}
+
+.secondaryCTA {
+  background-color: transparent;
+}
+
+.heroImage {
+  /* max-width: 480px; */
+  width: min(480px, 100%);
+  justify-self: center;
+  z-index: -1;
+  background-image: url("hero.png");
+  mix-blend-mode: multiply;
+  grid-column-end: span 2;
+  min-height: 70vw;
+  background-size: cover;
+  background-position: center;
+  grid-area: 1 / 2 / span 2 / span 2;
+}
+
+
+.destinationsSection {
+  display: grid;
+  padding: 10px 20px;
+  grid-template-columns:
+    repeat(auto-fill,
+      minmax(
+        clamp(
+          clamp(
+            100%/5 + 0.1%, 
+            (900px - 100vw)*1000,
+            100%/3 + 0.1% ), 
+        (480px - 100vw)*1000,
+        100%),
+      1fr));
+  gap: 10px;
+  justify-items: center;
+}
+
+.sectionHeading,
+.sectionDescription {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.sectionHeading{
+  /* font-family:  'Kalam', cursive; */
+  font-size: 2.5rem;
+}
+
+.sectionDescription{
+  font-size: 1.1rem;
+  max-width: 70ch;
+  margin-bottom: 10px;
+}
+
+.destinationCards {
+  max-width: 300px;
+  min-height: 400px;
+  background-color: var(--darkContrast);
+  color: var(--lightContrast);
+  display: grid;
+  grid-template-rows: 7fr 5fr;
+}
+
+.destinationsSection .secondaryCTA {
+  align-self: start;
+  grid-column: 1 / -1;
+  margin-top: 15px;
+  display: grid;
+}
+
+.destinationText {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.destinationImage {
+  background-image: url("https://images.unsplash.com/photo-1519160558534-579f5106e43f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.servicesSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+}
+
+.servicesSection > .sectionDescription {
+  justify-self: center;
+}
+
+.services {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-items: center;
+}
+
+.serviceText {
+  background-color: #6d0104;
+  display: grid;
+  place-items: center;
+  flex-grow: 1;
+  flex-basis: 0;
+  color: white;
+  text-align: center;
+  min-width: 300px;
+}
+
+.serviceText > h2{
+  padding: min(35px, 6vw);
+}
+
+
+.serviceImage {
+  min-width: 300px;
+  flex-grow: 1;
+  aspect-ratio: 5 / 3;
+  background-size: cover;
+}
+
+.forwardWrap {
+  flex-wrap: wrap;
+}
+
+.backwardWrap {
+  flex-wrap: wrap-reverse;
+}
+
+
+.subscribeSection {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 10px;
+  /* margin-bottom: clamp(0px, 100% - 100vh, 15%); */
+}
+
+
+.formWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: min(700px, 100%);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.subscribeImage {
+  flex-grow: 2.6;
+  height: 380px;
+
+  background-image: url("https://images.unsplash.com/photo-1570641963303-92ce4845ed4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+  background-size: cover;
+  mix-blend-mode: multiply;
+}
+
+.subscribeForm {
+  /* height: clamp(20vw, 80%, 250px); */
+  min-height: 300px;
+  flex-basis: 0;
+  flex-grow: 4;
+  margin-left: -10%;
+  display: grid;
+  gap: 20px;
+  background-color: darkblue;
+  padding: 20px;
+
+  align-content: center;
+}
+
+.subscribeSection input {
+  height: 30px;
+  border: 2px solid #010101;
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+.namesCont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.subscribeButton {
+  cursor: pointer;
+  height: 30px;
+}
+
+
+.subscribeAndFooterSeparator{
+  height: 1px;
+}
+
+footer {
+  background-image: url("mountain_bg\ 2.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  position: relative;
+  display: grid;
+  gap: 5px;
+  justify-items: center;
+  /* align-content: center; */
+}
+
+.footerWebsiteName {
+  border: 2px solid red;
+  transform: translateY(-50%);
+  padding: 10px;
+  /* justify-content: center; */
+  align-self: start;
+}
+
+.websiteDescription {
+  /* background-color: rgb(255, 0, 0, 0.3); */
+  padding: 10px;
+  text-align: center;
+  max-width: 600px;
+  color: var(--darkContrast);
+}
+
+.socialIcons{
+  display: flex;
+  gap: 20px;
+  align-self: center;
+}
+
+.socialIcons > a {
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: #6d0104;
+  border: 5px solid var(--darkContrast);
+  padding: 8px;
+  
+  aspect-ratio: 1;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Effect layer */
+footer::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: lightpink;
+  opacity: 0.3;
+}
+
+.footerNav {
+  align-self: center;
+  font-size: 1.3rem;
+  display: flex;
+  gap: 2px;
+
+  text-align: center;
+  width: 50%;
+}
+
+
+.copyright {
+  /* background-color:chocolate; */
+  width: 100%;
+  text-align: center;
+  padding: 6px;
+  font-weight: bold;
+}
+
+.serviceImage {
+  background-image: url("https://images.unsplash.com/photo-1458442310124-dde6edb43d10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60");
+}
+
+/* body::before{
+    content: "";
+    width: 5px;
+    height: 500vh;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: crimson;
+    position: absolute;
+    z-index: 999;
+} */
+
+
+.mobileMenuWrapper.clicked{
+  padding-top: 10px;
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--darkContrast);
+  /* background-color: rgb(0, 255, 255, 0.8); */
+  position: absolute;
+  flex-direction: column;
+  gap: 10px;
+}
+
+body{
+  /* filter: blur(4px); */
+}
+
+.mobileMenuWrapper.clicked .navigation{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobileMenuWrapper.clicked .searchBar{
+  display: flex;
+  height: 40px;
+  width: 90%;
+
+  border: 2px solid black;
+  align-self: center;
+}
+
+.mobileMenuWrapper.clicked .searchInputBox{
+  width: 90%;
+}
+
+/* .mobileMenuWrapper::before{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background-color: firebrick;
+} */
+
+.mobileMenuWrapper.clicked .searchButton{
+  /* margin-right: 7px; */
+}
+
+/* .searchBar:hover .searchInputBox{
+  width: 90%;
+} */
+
+.mobileMenuWrapper{
+  transition: 1s;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .heroImage{
+    grid-area: 2 / 1 / span 1 / span 3;
+  }
+
+  .heroText{
+    grid-area: 1 / 1 / span 1 / span 3;
+  }
+
+  .CTA{
+    font-size: 0.8rem;
+  }
+
+  .subscribeImage {
+    width: 100%;
+  }
+
+  .subscribeForm {
+    margin: -10% 0 0 0;
+    flex-grow: 0.9;
+  }
+
+  .navigation, .searchBar{
+    display: none;
+  }
+
+  .hamburgerMenu{
+    display: block;
+  }
+
+
+}
