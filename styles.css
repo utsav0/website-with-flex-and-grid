@@ -179,7 +179,7 @@ header {
 }
 
 .CTAContainer{
-  margin-top: min(15px, 1.5vw)
+  margin-top: min(15px, 3.5vw)
 }
 
 /* For all the CTA buttons on the website */
@@ -378,15 +378,19 @@ header {
   margin-left: -10%;
   display: grid;
   gap: 20px;
-  background-color: darkblue;
+  background-color: rgb(255, 198, 198, 0.85);
   padding: 20px;
 
   align-content: center;
 }
 
 .subscribeSection input {
+  box-sizing: content-box;
+  padding: 5px;
+  background-color: transparent;
   height: 30px;
-  border: 2px solid #010101;
+  border: none;
+  border-bottom: 2px solid #010101;
   flex-grow: 1;
   min-width: 200px;
 }
@@ -400,6 +404,17 @@ header {
 .subscribeButton {
   cursor: pointer;
   height: 30px;
+  background-color: #fb0053;
+  /* background-color: transparent; */
+  border: 3px solid #fb0053;
+  /* border: none; */
+  /* outline: none; */
+  padding: 5px;
+  border-style: inset;
+  box-sizing: content-box;
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* border: none; */
 }
 
 
