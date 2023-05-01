@@ -9,6 +9,10 @@
 } */
 
 
+.blockScroll{
+  overflow: hidden;
+}
+
 body {
   
   max-width: 2500px; /* To prevent the website from stretching too much on wider screens */
@@ -363,7 +367,7 @@ header {
 
   background-image: url("https://images.unsplash.com/photo-1570641963303-92ce4845ed4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
   background-size: cover;
-  mix-blend-mode: multiply;
+  /* mix-blend-mode: multiply; */
 }
 
 .subscribeForm {
@@ -576,7 +580,7 @@ body{
   }
 
   .subscribeForm {
-    margin: -10% 0 0 0;
+    margin: -20% 0 0 0;
     flex-grow: 0.9;
   }
 
