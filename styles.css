@@ -49,7 +49,8 @@ body > section {
 
 .heroSection {
   display: grid;
-  grid-template: auto 1fr / 2fr 1fr 2fr;
+  grid-template: auto minmax(auto, 1fr) 1.5fr/ 2fr 1fr 2fr;
+  grid-template: auto 1fr/ 2fr 1fr 2fr;
 }
 
 header {
@@ -132,8 +133,9 @@ header {
   cursor: pointer;
   display: none;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 15px;
+  top: 15px;
+  font-size: 1.6rem;
 }
 
 
@@ -152,12 +154,12 @@ header {
 }
 
 .heroHeading {
-  font-size: min(8vw, 4rem);
+  font-size: min(10vw, 4rem);
 }
 
 
 .heroSubheading {
-  font-size: min(1.2rem, 3.4vw);
+  font-size: min(1.2rem, 4vw);
   color: #010101b3;
   border-bottom: 1px solid var(--brandColor);
   width: fit-content;
@@ -168,7 +170,7 @@ header {
 }
 
 .heroDescription{
-  font-size: min(1rem, 2.2vw);
+  font-size: min(1rem, 3vw);
   margin-top: min(30px, 3vw);
 }
 
@@ -184,6 +186,8 @@ header {
   /* aspect-ratio: 4; */
   padding: min(12px, 1.5vw) min(17px, 1.7vw);
   padding: 1.5vw 1.7vw;
+  padding: 2.5vw 4.7vw;
+  padding: min(2.5vw, 14px) min(4.7vw, 28px);
   border-radius: 100px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -208,7 +212,7 @@ header {
 
 .heroImage {
   /* max-width: 480px; */
-  width: min(480px, 100%);
+  width: 100%;
   justify-self: center;
   z-index: -1;
   background-image: url("hero.png");
@@ -557,7 +561,8 @@ body{
   }
 
   .heroText{
-    grid-area: 1 / 1 / span 1 / span 3;
+    align-self: start;
+    grid-area: 1 / 1 / span 2 / span 3;
   }
 
   .CTA{
