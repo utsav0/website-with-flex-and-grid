@@ -154,12 +154,12 @@ header {
 }
 
 .heroHeading {
-  font-size: min(10vw, 4rem);
+  font-size: min(11vw, 4rem);
 }
 
 
 .heroSubheading {
-  font-size: min(1.2rem, 4vw);
+  font-size: min(1.2rem, 5vw);
   color: #010101b3;
   border-bottom: 1px solid var(--brandColor);
   width: fit-content;
@@ -170,7 +170,7 @@ header {
 }
 
 .heroDescription{
-  font-size: min(1rem, 3vw);
+  font-size: min(1rem, 4vw);
   margin-top: min(30px, 3vw);
 }
 
@@ -218,7 +218,7 @@ header {
   background-image: url("hero.png");
   mix-blend-mode: multiply;
   grid-column-end: span 2;
-  min-height: 70vw;
+  min-height: 55vw;
   background-size: cover;
   background-position: center;
   grid-area: 1 / 2 / span 2 / span 2;
@@ -566,7 +566,7 @@ body{
   }
 
   .CTA{
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
 
   .subscribeImage {
