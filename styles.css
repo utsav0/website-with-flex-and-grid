@@ -64,7 +64,7 @@ header {
 }
 
 .logo {
-  height: 60px;
+  height: min(60px, 13vw);
   mix-blend-mode: multiply;
 }
 
@@ -141,7 +141,7 @@ header {
 
 .heroText {
   grid-area: 2 / 1 / span 1 / span 2;
-  margin-top: 20px;
+  margin-top: 25px;
   text-align: center;
   font-family: "Maven Pro", sans-serif;
   color: var(--darkContrast);
