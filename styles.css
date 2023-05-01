@@ -261,6 +261,7 @@ header {
 }
 
 .destinationCards {
+  border-radius: 20px;
   max-width: 300px;
   min-height: 400px;
   background-color: var(--darkContrast);
@@ -284,6 +285,7 @@ header {
 }
 
 .destinationImage {
+  border-radius: 20px 20px 0 0;
   background-image: url("https://images.unsplash.com/photo-1519160558534-579f5106e43f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
   background-size: cover;
   background-position: center;
