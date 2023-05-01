@@ -325,8 +325,8 @@ header {
 
 .serviceImage {
   min-width: 300px;
+  min-height: 260px;
   flex-grow: 1;
-  aspect-ratio: 5 / 3;
   background-size: cover;
 }
 
