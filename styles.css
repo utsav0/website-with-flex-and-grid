@@ -65,7 +65,7 @@ header {
   width: 100%;
   min-height: 55vw;
   z-index: -1;
-  background-image: url("hero.png");
+  background-image: url("media/hero.png");
   background-size: cover;
   background-position: center;
   mix-blend-mode: multiply;
@@ -288,10 +288,33 @@ header {
 
 .serviceImage {
   min-width: 300px;
-  min-height: 260px;
+  min-height: 300px;
   flex-grow: 1;
   background-size: cover;
-  background-image: url("https://images.unsplash.com/photo-1458442310124-dde6edb43d10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60");
+  background-position: bottom;
+}
+
+#service1Image{
+  background-image: url("media/biking.jpg");
+}
+#service2Image{
+  background-image: url("media/canyoning.jpg");
+}
+#service3Image{
+  background-image: url("media/trekking.jpg");
+}
+
+#destinationImage1{
+  background-image: url("media/view.jpg");
+}
+#destinationImage2{
+  background-image: url("media/peace.jpg");
+}
+#destinationImage3{
+  background-image: url("media/waterfalls.jpg");
+}
+#destinationImage4{
+  background-image: url("media/smallness.jpg");
 }
 
 .forwardWrap {
@@ -319,7 +342,7 @@ header {
 .subscribeImage {
   flex-grow: 2.6;
   height: 380px;
-  background-image: url("https://images.unsplash.com/photo-1570641963303-92ce4845ed4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+  background-image: url("media/subsImage.jpg");
   background-size: cover;
 }
 
@@ -371,7 +394,7 @@ header {
 footer {
   display: grid;
   padding: 0;
-  background-image: url("mountain_bg\ 2.jpg");
+  background-image: url("media/footerBg.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
