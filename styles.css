@@ -3,6 +3,7 @@
   --complimentaryColor: #ffe66d;
   --accentColor: #fb0053;
   --blackReplacementColor: #292f36;
+  --darkContrast: #6d0104;
 }
 
 
@@ -92,7 +93,7 @@ header {
 /* For the links of navigation */
 .navigation a {
   text-decoration: none;
-  color: var(--blackReplacementColor);
+  color: var(--darkContrast);
   font-family: "EB Garamond", serif;
   font-size: 1.4rem;
   font-weight: bold;
@@ -149,7 +150,7 @@ header {
   width: fit-content;
   margin: 0 auto;
   font-size: min(1.2rem, 5vw);
-  color: #292f36;
+  color: #b35658;
   border-bottom: 1px solid var(--accentColor);
 }
 
@@ -158,6 +159,7 @@ header {
 }
 
 .heroDescription{
+  color: var(--darkContrast);
   font-size: min(1rem, 4vw);
   margin-top: min(30px, 3vw);
 }
@@ -213,6 +215,7 @@ header {
 /* Will be apllied to heading and description fo all the sections accept for hero section */
 .sectionHeading,
 .sectionDescription {
+  color: var(--blackReplacementColor);
   grid-column: 1 / -1;
   text-align: center;
 }
@@ -234,6 +237,7 @@ header {
   border-radius: 20px;
   background-color: var(--complimentaryColor);
   color: var(--blackReplacementColor);
+  color: #6d0104;
   grid-template-rows: 7fr 5fr;
 }
 
@@ -247,6 +251,10 @@ header {
   padding: 20px;
   flex-direction: column;
   gap: 10px;
+}
+
+.destinationText{
+  font-size: 1.15rem;
 }
 
 .destinationImage {
@@ -280,6 +288,7 @@ header {
   flex-grow: 1;
   flex-basis: 0;
   text-align: center;
+  color: var(--darkContrast);
 }
 
 .serviceText > h2{
@@ -334,21 +343,22 @@ header {
 .formWrapper {
   display: flex;
   flex-wrap: wrap;
-  width: min(700px, 100%);
+  width: min(820px, 100%);
   justify-content: center;
   align-items: center;
 }
 
 .subscribeImage {
   flex-grow: 2.6;
-  height: 380px;
+  height: max(40vw, 380px);
   background-image: url("media/subsImage.jpg");
   background-size: cover;
 }
 
 .subscribeForm {
   display: grid;
-  min-height: 300px;
+  /* min-height: 300px; */
+  aspect-ratio: 5 / 3;
   margin-left: -10%;
   padding: 20px;
   flex-basis: 0;
@@ -413,7 +423,7 @@ footer {
   max-width: 600px;
   padding: 10px;
   text-align: center;
-  color: var(--blackReplacementColor);
+  color: var(--darkContrast);
 }
 
 .socialIcons{
@@ -439,7 +449,7 @@ footer::before{
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: lightpink;
+  background-color: var(--complimentaryColor);
   opacity: 0.3;
 }
 
