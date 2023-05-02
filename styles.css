@@ -6,35 +6,34 @@
   --darkContrast: #6d0104;
 }
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 body {
   display: grid;
   max-width: 2500px;
-  margin: 0 auto; 
+  margin: 0 auto;
   background-color: var(--neutralColor);
-  grid-template-rows: repeat(3, minmax(max-content, 100vh)) auto auto minmax(max-content, 40vh);
+  grid-template-rows: repeat(3, minmax(max-content, 100vh)) auto auto minmax(
+      max-content,
+      40vh
+    );
   gap: 25px;
 }
 
 /* For blocking when the menu is opened in mobile version */
-.blockScroll{
+.blockScroll {
   overflow: hidden;
 }
-
-
 
 *::selection {
   background-color: var(--accentColor);
 }
 
-input{
+input {
   color: var(--accentColor);
   caret-color: var(--accentColor);
 }
@@ -46,7 +45,9 @@ footer {
   padding: 10px; /* Padding for all the sections */
 }
 
-.heroSection {grid-template: auto 1fr/ 2fr 1fr 2fr;}
+.heroSection {
+  grid-template: auto 1fr/ 2fr 1fr 2fr;
+}
 
 header {
   display: flex;
@@ -133,7 +134,7 @@ header {
   background-color: transparent;
 }
 
-.hamburgerMenu{
+.hamburgerMenu {
   cursor: pointer;
   display: none; /* Initially invisible */
   position: absolute;
@@ -158,14 +159,14 @@ header {
   color: var(--accentColor);
 }
 
-.heroDescription{
+.heroDescription {
   color: var(--darkContrast);
   font-size: min(1rem, 4vw);
   margin-top: min(30px, 3vw);
 }
 
-.CTAContainer{
-  margin-top: min(15px, 3.5vw)
+.CTAContainer {
+  margin-top: min(15px, 3.5vw);
 }
 
 /* For all the CTA buttons on the website */
@@ -181,7 +182,7 @@ header {
   border-radius: 100px;
 }
 
-.heroText .secondaryCTA{
+.heroText .secondaryCTA {
   margin-left: 10px;
 }
 
@@ -195,19 +196,19 @@ header {
 
 /* SECTION CHANGED */
 
-.destinationsSection {
+.featuresSection {
   padding: 10px 20px;
-  grid-template-columns:
-    repeat(auto-fill,
-      minmax(
-        clamp(
-          clamp(
-            100%/5 + 0.1%, 
-            (900px - 100vw)*1000,
-            100%/3 + 0.1% ), 
-        (480px - 100vw)*1000,
-        100%),
-      1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(
+      clamp(
+        clamp(100%/5 + 0.1%, (1000px - 100vw) * 1000, 100%/3 + 0.1%),
+        (580px - 100vw) * 1000,
+        100%
+      ),
+      1fr
+    )
+  );
   gap: 20px;
   justify-items: center;
 }
@@ -220,17 +221,17 @@ header {
   text-align: center;
 }
 
-.sectionHeading{
+.sectionHeading {
   font-size: 2.5rem;
 }
 
-.sectionDescription{
+.sectionDescription {
   font-size: 1.1rem;
   max-width: 70ch;
   margin-bottom: 10px;
 }
 
-.destinationCards {
+.featureCards {
   display: grid;
   max-width: 300px;
   min-height: 400px;
@@ -241,23 +242,23 @@ header {
   grid-template-rows: 7fr 5fr;
 }
 
-.destinationsSection .secondaryCTA {
+.featuresSection .secondaryCTA {
   margin-top: 15px;
   grid-column: 1 / -1;
 }
 
-.destinationText {
+.featureText {
   display: flex;
   padding: 20px;
   flex-direction: column;
   gap: 10px;
 }
 
-.destinationText{
+.featureText {
   font-size: 1.15rem;
 }
 
-.destinationImage {
+.featureImage {
   border-radius: 20px 20px 0 0;
   background-image: url("https://images.unsplash.com/photo-1519160558534-579f5106e43f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
   background-size: cover;
@@ -266,21 +267,21 @@ header {
 
 /* SECTION CHANGED */
 
-.servicesSection {
+.adventureSection {
   grid-template-columns: 1fr 1fr;
   row-gap: 10px;
 }
 
-.servicesSection > .sectionDescription {
+.adventureSection > .sectionDescription {
   justify-self: center;
 }
 
-.services {
+.adventure {
   grid-column: 1 / -1;
   display: flex;
 }
 
-.serviceText {
+.adventureText {
   display: grid;
   min-width: 300px;
   background-color: var(--complimentaryColor);
@@ -291,11 +292,11 @@ header {
   color: var(--darkContrast);
 }
 
-.serviceText > h2{
+.adventureText > h2 {
   padding: min(35px, 6vw);
 }
 
-.serviceImage {
+.adventureImage {
   min-width: 300px;
   min-height: 300px;
   flex-grow: 1;
@@ -303,26 +304,26 @@ header {
   background-position: bottom;
 }
 
-#service1Image{
+#adventure1Image {
   background-image: url("media/biking.jpg");
 }
-#service2Image{
+#adventure2Image {
   background-image: url("media/canyoning.jpg");
 }
-#service3Image{
+#adventure3Image {
   background-image: url("media/trekking.jpg");
 }
 
-#destinationImage1{
+#featureImage1 {
   background-image: url("media/view.jpg");
 }
-#destinationImage2{
+#featureImage2 {
   background-image: url("media/peace.jpg");
 }
-#destinationImage3{
+#featureImage3 {
   background-image: url("media/waterfalls.jpg");
 }
-#destinationImage4{
+#featureImage4 {
   background-image: url("media/smallness.jpg");
 }
 
@@ -397,7 +398,7 @@ header {
   font-weight: bold;
 }
 
-.subscribeAndFooterSeparator{
+.subscribeAndFooterSeparator {
   height: 1px;
 }
 
@@ -426,7 +427,7 @@ footer {
   color: var(--darkContrast);
 }
 
-.socialIcons{
+.socialIcons {
   display: flex;
   gap: 20px;
 }
@@ -436,7 +437,7 @@ footer {
   padding: 8px;
   aspect-ratio: 1;
   font-size: 2rem;
-  color: #6d0104;
+  color: var(--accentColor);
   text-decoration: none;
   place-items: center;
   border: 5px solid var(--blackReplacementColor);
@@ -444,7 +445,7 @@ footer {
 }
 
 /* Effect layer */
-footer::before{
+footer::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -470,11 +471,11 @@ footer::before{
     z-index: 999;
 } */
 
-.mobileMenuWrapper{
+.mobileMenuWrapper {
   transition: 1s;
 }
 
-.mobileMenuWrapper.clicked{
+.mobileMenuWrapper.clicked {
   display: flex;
   position: fixed;
   top: 0;
@@ -487,8 +488,7 @@ footer::before{
   gap: 10px;
 }
 
-
-.mobileMenuWrapper.clicked .navigation{
+.mobileMenuWrapper.clicked .navigation {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -496,7 +496,7 @@ footer::before{
   gap: 10px;
 }
 
-.mobileMenuWrapper.clicked .searchBar{
+.mobileMenuWrapper.clicked .searchBar {
   display: flex;
   width: 80%;
   height: 40px;
@@ -504,15 +504,17 @@ footer::before{
   align-self: center;
 }
 
-.mobileMenuWrapper.clicked .searchInputBox{
+.mobileMenuWrapper.clicked .searchInputBox {
   width: 90%;
 }
 
 @media only screen and (max-width: 600px) {
-  .heroText{
+  .heroText {
     grid-area: 1 / 1 / span 2 / span 3;
   }
-  .heroImage{grid-area: 2 / 1 / span 1 / span 3;}
+  .heroImage {
+    grid-area: 2 / 1 / span 1 / span 3;
+  }
 
   .subscribeImage {
     width: 100%;
@@ -521,8 +523,13 @@ footer::before{
     margin: -20% 0 0 0;
     flex-grow: 0.9;
   }
-  
-  .navigation, .searchBar{display: none;}
 
-  .hamburgerMenu{display: block;}
+  .navigation,
+  .searchBar {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    display: block;
+  }
 }
